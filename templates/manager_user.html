@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Details</title>
+</head>
+<body>
+    <h1>User: {{ user['name'] }}</h1>
+    <h2>Assessments</h2>
+    <ul>
+        {% for assessment in assessments %}
+        <li>Role: {{ assessment['role_name'] }} - Skill: {{ assessment['skill_name'] }} - Level: {{ assessment['level'] }} (Required: {{ assessment['required_level'] }})</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('manager') }}">Back to Manager's Dashboard</a>
+</body>
+</html>

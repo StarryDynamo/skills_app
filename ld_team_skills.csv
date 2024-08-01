@@ -1,0 +1,33 @@
+Type,Name,Skill,Level
+role,L&D Manager,Instructional Design,5
+role,L&D Manager,Project Management,5
+role,L&D Manager,Leadership,4
+role,L&D Manager,Coaching,4
+role,L&D Specialist,Curriculum Development,5
+role,L&D Specialist,E-learning Development,4
+role,L&D Specialist,Needs Analysis,4
+role,L&D Specialist,Training Delivery,5
+role,Instructional Designer,Content Development,5
+role,Instructional Designer,Storyboarding,4
+role,Instructional Designer,Graphic Design,3
+role,Instructional Designer,Multimedia Production,3
+role,Training Coordinator,Event Planning,5
+role,Training Coordinator,Scheduling,4
+role,Training Coordinator,Communication,4
+role,Training Coordinator,Administration,3
+user,Alice,Instructional Design,4
+user,Alice,Project Management,3
+user,Alice,Leadership,4
+user,Alice,Coaching,2
+user,Bob,Curriculum Development,4
+user,Bob,E-learning Development,4
+user,Bob,Needs Analysis,3
+user,Bob,Training Delivery,5
+user,Carol,Content Development,5
+user,Carol,Storyboarding,4
+user,Carol,Graphic Design,4
+user,Carol,Multimedia Production,3
+user,David,Event Planning,5
+user,David,Scheduling,3
+user,David,Communication,4
+user,David,Administration,2

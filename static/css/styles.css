@@ -1,0 +1,54 @@
+/* Basic styling for the entire application */
+body {
+    background-color: #f4f4f4; /* Light gray background */
+    color: #333; /* Dark text for readability */
+    font-family: 'Arial, sans-serif';
+    margin: 0;
+    padding: 0;
+}
+
+/* Header and footer styling */
+.header, .footer {
+    background-color: #003366; /* Navy blue for headers and footers */
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Container styling for page content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff; /* White content background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Button styling */
+.btn-primary {
+    background-color: #003366;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: #00509e;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .header, .footer {
+        text-align: left;
+        padding: 10px;
+    }
+}

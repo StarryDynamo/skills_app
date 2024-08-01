@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header class="header">
+        <h1>Assessment Results</h1>
+    </header>
+
+    <div class="container">
+        <h2>Role: {{ role['name'] }}</h2>
+        <h3>Strengths</h3>
+        <ul>
+            {% for task, level in strengths.items() %}
+            <li>{{ task }}: Level {{ level }}</li>
+            {% endfor %}
+        </ul>
+        <h3>Gaps</h3>
+        <ul>
+            {% for task, gap in gaps.items() %}
+            <li>{{ task }}: Level {{ gap[0] }} (required: Level {{ gap[1] }})</li>
+            {% endfor %}
+        </ul>
+        <h3>Recommended Learning Pathways</h3>
+        <p>{{ learning_recommendations }}</p>
+        <a href="{{ url_for('index') }}" class="btn-primary">Back to Home</a>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Team Skills Diagnostic. All rights reserved.</p>
+    </footer>
+</body>
+</html>

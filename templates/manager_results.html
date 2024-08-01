@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Search Results for "{{ search_term }}"</h1>
+    <ul>
+        {% for user in users %}
+        <li><a href="{{ url_for('manager_user', user_id=user['id']) }}">{{ user['name'] }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('manager') }}">Back to Manager's Dashboard</a>
+</body>
+</html>

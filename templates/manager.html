@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager's Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Manager's Dashboard</h1>
+        <nav>
+            <a href="/">Home</a> |
+            <a href="/about">About Us</a> |
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Search by User</h2>
+        <form action="/manager/search" method="post">
+            <select name="user_id">
+                {% for user in users %}
+                <option value="{{ user.id }}">{{ user.name }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit" class="btn-primary">Search User</button>
+        </form>
+
+        <h2>Search by Task</h2>
+        <form action="/manager/task_search" method="post">
+            <select name="task_id">
+                {% for task in tasks %}
+                <option value="{{ task.id }}">{{ task.task_name }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit" class="btn-primary">Search Task</button>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Your Learning Platform. All rights reserved.</p>
+    </footer>
+</body>
+</html>

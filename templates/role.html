@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self-Assessment for {{ role['name'] }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header class="header">
+    <h1>Self-Assessment for {{ role['name'] }}</h1>
+    </header>
+    <div class="container">
+    <form action="{{ url_for('assess') }}" method="post">
+        <input type="hidden" name="role_id" value="{{ role['id'] }}">
+        <label for="user_name">Your Name:</label>
+        <input type="text" name="user_name" required><br><br>
+        <h2>Tasks</h2>
+        {% for task in tasks %}
+        <label>{{ task['task_name'] }}:</label>
+        <input type="hidden" name="task_id" value="{{ task['id'] }}">
+        <input type="number" name="level" min="1" max="5" required><br><br>
+        {% endfor %}
+        <button type="submit">Submit Assessment</button>
+    </form>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 Team Skills Diagnostic. All rights reserved.</p>
+    </footer>
+</body>
+</html>
